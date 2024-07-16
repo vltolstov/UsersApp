@@ -6,6 +6,7 @@
 
     <title>{{config('app.name')}}</title>
 
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +19,18 @@
 <body>
 
 <div class="container">
+    @guest
+        <div>
+            <a href="{{ route('login') }}">Вход</a>
+            <a href="{{ route('registration') }}">Регистрация</a>
+        </div>
+    @endguest
+    @auth
+        <div>
+            <a href="{{ route('logout') }}">Выход</a>
+        </div>
+    @endauth
+
     @section('content')
     @show
 </div>
