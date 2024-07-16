@@ -1,0 +1,19 @@
+p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.container p {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
